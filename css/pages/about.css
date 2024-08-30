@@ -35,17 +35,17 @@
         .staff-boss {
             grid-area: boss;
         
-            background-image: url("/assets/images/error-avatar.jpg");
+            background-image: url("../../assets/images/error-avatar.jpg");
         }
 
         .staff-waitress {
             grid-area: waitress;
-            background-image: url("/assets/images/info-avatar.jpg");
+            background-image: url("../../assets/images/info-avatar.jpg");
         }
 
         .staff-dev {
             grid-area: dev;
-            background-image: url("/assets/images/dev.png");
+            background-image: url("../../assets/images/dev.png");
         }
 
      
@@ -86,17 +86,17 @@
             .staff-boss {
                 grid-area: boss;
             
-                background-image: url("/assets/images/error-avatar.jpg");
+                background-image: url("../../assets/images/error-avatar.jpg");
             }
     
             .staff-waitress {
                 grid-area: waitress;
-                background-image: url("/assets/images/info-avatar.jpg");
+                background-image: url("../../assets/images/info-avatar.jpg");
             }
     
             .staff-dev {
                 grid-area: dev;
-                background-image: url("/assets/images/dev.png");
+                background-image: url("../../assets/images/dev.png");
             }
     
          
