@@ -1,0 +1,101 @@
+
+.landing__main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: color;
+    animation-name: opacify-background-color;
+    animation-duration: 1000ms;
+    animation-delay: 2500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+    #landing-figure {
+        opacity: 0;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        animation-name: show-down-from-high-up;
+        animation-duration: 1500ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: backwards;
+   
+    }
+
+
+    .landing__message-and-navlink {
+        display: flex;
+        flex-direction: column;
+        
+        a {
+            text-align: center;
+            margin-block: 10px;
+            transform: translateY(-100px);
+            opacity: 0;
+            animation: appear 500ms ease-in-out 2500ms forwards;
+        }
+     
+    }
+    
+
+    .message {
+        opacity: 0;
+        transform: translateY(-100px);
+        display: flex;
+        width: 400px;
+        animation: appear 500ms ease-in-out 2500ms forwards;
+        box-shadow: 0 0 5px #000000;
+        & > section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .message__figure-section {
+            background-color: var(--primary-color);
+  
+            width: 40%;
+    
+            figure {
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+        }
+
+        .message__content-section {
+            background-color: var(--third-color);
+    
+       
+            padding: 20px;
+            width: 60%;
+        }
+    }
+
+}
+
+
+/*----------------------------RESPONSIVE WEB DESIGIN MOBILE------------------------------------*/
+
+
+@media ( 0 < width  <= 435px ) {
+
+ 
+
+    .landing__main {
+
+        .landing__message-and-navlink {
+            display: flex;
+            width: 95%;
+         
+        }
+
+        .message {
+          
+            width: 100%;
+    
+        }
+    
+    }
+}

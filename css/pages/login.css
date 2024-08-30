@@ -1,0 +1,124 @@
+.login-header {
+    animation: none;
+    opacity: 1;
+}
+
+.login__main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    & > section:first-of-type {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        padding: 10px;
+        width: 400px;
+        header {
+            color: #fff;
+        }
+
+
+    }
+
+    form {
+        
+        display: flex;
+        flex-direction: column;
+        & > section:first-of-type {
+            
+            display: flex;
+            flex-direction: column;
+
+            article {
+
+                display: flex;
+                margin-block: 10px;
+                border: solid #ffffff 1px;
+                border-radius: 8px;
+                overflow: hidden;
+                & > section:first-of-type {
+                   
+                    padding: 10px;
+                    width: 20%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    i {
+                        color: #fff;
+                    }
+                }
+                section + section {
+           
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        outline: none;
+                        height: 100%;
+                        border: none;
+                        padding-inline: 5px;
+                        font-size: 18px;
+                    
+
+                        &:valid {
+                            outline: solid rgb(84, 121, 84) 3px;
+                            color: rgb(84,121,84);
+                        }
+
+                        &:invalid {
+                            outline: solid rgb(235, 131, 131) 3px;
+                            color: rgb(235, 131, 131);
+                        }
+
+                        &::placeholder {
+                        
+                            font-family: "Poppins";
+                            
+                        }
+                      
+                    }
+                }
+            }
+        }
+
+        & > section:last-of-type {
+            margin-block: 20px;
+          
+            display: flex;
+            justify-content: space-between;
+
+            button {
+    
+                padding: 8px 20px;
+                align-self: flex-start;
+                border-radius: 8px;
+                border: none;
+                transition: all ease-in-out 300ms;
+                background-color: var(--primary-color);
+                font-size: 18px;
+                &:hover {
+                    cursor: pointer;
+                    color: #fff;
+                    background-color: var(--secondary-color);
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------RESPONSIVE WEB DESIGIN MOBILE------------------------------------*/
+
+
+@media ( 0 < width  <= 435px ) {
+    .login__main {
+     
+        & > section:first-of-type {
+       
+            width: 98%;
+         
+        }
+    
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+    <head>
+        <title>Belle Epoque</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Boris Rose">
+        <meta name="description" content="Belle Epoque est une application de restaurant gastronomique qui vous permet de réserver des plats à emporter">
+        <meta name="keywords" content="Belle Epoque, Gastronomie française, Restauration, Plats à emporter">
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Belle Epoque">
+        <meta property="og:description" content="Belle Epoque est une application de restaurant gastronomique qui vous permet de réserver des plats à emporter">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="./assets/logo.jpg">
+        <link rel="icon" href="../assets/images/logo.jpg" type="image/jpg">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="https://kit.fontawesome.com/1b1fa6fbda.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="app-header login-header">
+            <section class="app-header__figure-and-title">
+                <figure>
+                    <img src="../assets/images/logo.jpg" alt="logo de notre application">
+                </figure>
+                <span aria-label="Nom de l'application">Belle Epoque</span>
+            </section>
+            <nav class="app-header__nav">
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <span class="desktop-navlink-span" aria-label="text du lien vers la page d'accueil">Accueil</span>
+                            <span class="mobile-navlink-span"  aria-label="icône représentant un maison ou l'accueil">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                        </a>
+                   
+                    </li>
+                    <li>
+                        <a href="./menu.html">
+                            <span class="desktop-navlink-span" aria-label="text du lien vers la page du menu">Menu</span>
+                            <span class="mobile-navlink-span" aria-label="icône représentant un livre ou le menu">
+                                <i class="fa-solid fa-book"></i>
+                            </span>
+                        </a> 
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="app__main login__main">
+
+            <section>
+                <header>
+                    <h1>Connexion</h1>
+                </header>
+                <form id="login-form">
+                    <section>
+                        <article>
+                            <section>
+                                <span aria-label="icône de l'enveloppe synonyme d'ajout d'un email">
+                                    <i class="fa-regular fa-envelope"></i> 
+                                </span>
+                            </section>
+                            <section>
+                                <label for="email"></label>
+                                <input 
+                                    id="email" 
+                                    type="email" 
+                                    name="email" 
+                                    placeholder="Entrez votre email"
+                                    pattern="^[a-z\.]{2,20}@{1}[a-z]{2,6}[\.]{1}[a-z]{2,5}$"
+                                    required
+                                    aria-required="true"
+                                >
+                            </section>
+                        </article>
+                        <article>
+                            <section>
+                                <span aria-label="icône de verrou synonyme d'ajout d'un mot de passe">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                            </section>
+                            <section>
+                                <label for="password"></label>
+                                <input 
+                                    id="password" 
+                                    type="password" 
+                                    name="password" 
+                                    placeholder="Entrez votre mot de passe"
+                                    pattern="^[a-zA-Z0-9!\._\-]{12,20}$"
+                                    required
+                                    aria-required="true"
+                                >
+                            </section>
+                        </article>
+                    </section> 
+                    <section>
+                        <button id="login-from-submit-button"  type="submit">Valider</button>
+                        <button id="login-form-reset-button" type="reset">Réintialiser</button>
+                    </section>    
+                </form>
+            </section>
+
+        </main>
+        <footer class="app-footer">
+            <ul>
+                <li>
+                    <a href="./about.html">Qui sommes-nous ?</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+ </html>   

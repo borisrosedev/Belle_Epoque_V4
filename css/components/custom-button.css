@@ -1,0 +1,11 @@
+
+.custom-button {
+    padding: 8px 30px;
+    background-color: var(--primary-color);
+    transition: all ease-in-out 300ms;
+    border-radius: 8px;
+    &:hover {
+        color: #ffffff;
+        background-color: var(--secondary-color);
+    }
+}

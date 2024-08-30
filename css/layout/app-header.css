@@ -1,0 +1,100 @@
+
+
+.app-header {
+    box-shadow: 0 0 5px #000000;
+    height: 8vh;
+    display: flex;
+    padding-inline: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation: show-down 1000ms ease-in-out 1500ms forwards;
+    justify-content: space-between;
+    z-index: 20;
+
+
+    
+    .app-header__figure-and-title {
+      
+        display: flex;
+        /* par défaut la flex-direction d'une flexbox a comme valeur row donc 
+        pas la peine de l'écrire si cela vous convient*/
+        flex-direction: row;
+        align-items: center;
+
+        span {
+           color: #ffffff; 
+           margin-inline: 10px;
+           font-family: "Parisienne", cursive;
+           font-size: 30px;
+        }
+
+    }
+
+    .app-header__nav {
+        display: flex;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin-inline: 10px;
+
+                a {
+                    color: #ffffff;
+                }
+               
+            }
+        }
+
+        .mobile-navlink-span {
+            display: none;
+        }
+    }
+
+    /* css nesting (imbrication) */
+    figure {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    nav {
+     
+    }
+}
+
+
+/*----------------------------RESPONSIVE WEB DESIGIN MOBILE------------------------------------*/
+
+
+@media ( 0 < width  <= 435px ) {
+    .app-header {
+
+        .app-header__figure-and-title {
+        
+    
+            span {
+               display: none;
+            }
+         
+        }
+    
+        .app-header__nav { 
+
+            .desktop-navlink-span {
+                display: none;
+            }
+    
+            .mobile-navlink-span {
+                display: unset;
+                margin-inline: 10px;
+            }
+    
+        }
+    }
+    
+}

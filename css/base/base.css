@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;  
+}
+
+
+figure {
+    margin: 0;
+}
+
+  
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+body, ul {
+    margin: 0;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}

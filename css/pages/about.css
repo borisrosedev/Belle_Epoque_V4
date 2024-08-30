@@ -1,0 +1,106 @@
+.about__main {
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.8);
+
+
+    .about__staff {
+   
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px;
+        grid-template-areas: 
+            "boss boss waitress"
+            "boss boss dev";
+
+        .staff {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column-reverse;
+            .staff-info {
+                display: flex;
+                background-color: #fff;
+                height: 50px;
+                flex-direction: column;
+                padding: 0 10px;
+                
+                
+            }
+        }
+        .staff-boss {
+            grid-area: boss;
+        
+            background-image: url("/assets/images/error-avatar.jpg");
+        }
+
+        .staff-waitress {
+            grid-area: waitress;
+            background-image: url("/assets/images/info-avatar.jpg");
+        }
+
+        .staff-dev {
+            grid-area: dev;
+            background-image: url("/assets/images/dev.png");
+        }
+
+     
+    }
+}
+
+/*---------------------------------RWD-MOBILE------------------*/
+
+@media (0 < width <= 435px) {
+    .about__main {
+    
+    
+        .about__staff {
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 150px 150px;
+            grid-template-areas: 
+                "boss boss waitress"
+                "boss boss dev";
+    
+            .staff {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column-reverse;
+                .staff-info {
+                    display: flex;
+                    background-color: #fff;
+                    height: 50px;
+                    flex-direction: column;
+                    padding: 0 10px;
+                    
+                    
+                }
+            }
+            .staff-boss {
+                grid-area: boss;
+            
+                background-image: url("/assets/images/error-avatar.jpg");
+            }
+    
+            .staff-waitress {
+                grid-area: waitress;
+                background-image: url("/assets/images/info-avatar.jpg");
+            }
+    
+            .staff-dev {
+                grid-area: dev;
+                background-image: url("/assets/images/dev.png");
+            }
+    
+         
+        }
+    }
+    
+}

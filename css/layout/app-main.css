@@ -1,0 +1,9 @@
+.app__main {
+    display: flex;
+    background-image: url("/assets/images/bg.jpg");
+    min-height: 92vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 8vh;
+}

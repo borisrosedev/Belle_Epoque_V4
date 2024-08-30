@@ -1,0 +1,14 @@
+@import url("./base/tipography.css");
+@import url("./abstracts/variables.css");
+@import url("./abstracts/keyframes.css");
+@import url("./base/base.css");
+@import url("./components/custom-button.css");
+
+@import url("./layout/app-header.css");
+@import url("./layout/app-main.css");
+@import url("./layout/app-footer.css");
+
+@import url("./pages/landing.css");
+@import url("./pages/menu.css");
+@import url("./pages/login.css");
+@import url("./pages/about.css");
