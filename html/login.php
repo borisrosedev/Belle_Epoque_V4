@@ -1,3 +1,43 @@
+<?php
+    session_start();
+    $database = [
+        [
+            "email" => "boris@gmail.com",
+            "password"=> "10Caroline10",
+            "photo_url" => "https://cdn.pixabay.com/photo/2024/05/30/12/49/man-8798457_1280.jpg"
+        ],
+        [
+            "email" => "caroline@gmail.com",
+            "password" => "10Alexandre10",
+            "phot_url" => "https://cdn.pixabay.com/photo/2021/02/27/16/25/woman-6055084_1280.jpg"
+        ]
+    ];
+
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $email = htmlspecialchars($_POST["email"]);
+        $password = htmlspecialchars($_POST["password"]);
+
+        for( $i = 0 ; $i < count($database) ; $i++ ) {
+            if($database[$i]["email"] == $email) {
+                if($database[$i]["password"] == $password) {
+                    header("Location: ./dashboard.php");
+                    setcookie("user_email", $database[$i]["email"], time() + 3600);
+                    setcookie("user_photo_url", $database[$i]["photo_url"], time() + 3600);
+                    $_SESSION["email"] = $database[$i]["email"];
+                    $_SESSION["photo_url"] = $database[$i]["photo_url"];
+                }
+            }
+        }
+    }
+
+    //
+    // 
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr-FR" dir="ltr">
     <head>
@@ -18,16 +58,16 @@
     </head>
     <body>
         <header class="app-header login-header">
-            <section class="app-header__figure-and-title">
+            <a href="/"  class="app-header__figure-and-title">
                 <figure>
                     <img src="../assets/images/logo.jpg" alt="logo de notre application">
                 </figure>
                 <span aria-label="Nom de l'application">Belle Epoque</span>
-            </section>
+            </a>
             <nav class="app-header__nav">
                 <ul>
                     <li>
-                        <a href="../index.html">
+                        <a href="/">
                             <span class="desktop-navlink-span" aria-label="text du lien vers la page d'accueil">Accueil</span>
                             <span class="mobile-navlink-span"  aria-label="icône représentant un maison ou l'accueil">
                                 <i class="fa-solid fa-house"></i>
@@ -52,7 +92,7 @@
                 <header>
                     <h1>Connexion</h1>
                 </header>
-                <form id="login-form">
+                <form id="login-form" action="" method="POST">
                     <section>
                         <article>
                             <section>
@@ -96,7 +136,8 @@
                     <section>
                         <button id="login-from-submit-button"  type="submit">Valider</button>
                         <button id="login-form-reset-button" type="reset">Réintialiser</button>
-                    </section>    
+                    </section>
+                   
                 </form>
             </section>
 

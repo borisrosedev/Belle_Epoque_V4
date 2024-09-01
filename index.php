@@ -1,3 +1,15 @@
+<?php 
+
+
+  function display_message ($custom_message) {
+      return $custom_message;
+  }
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr-FR" dir="ltr">
   <head>
@@ -39,7 +51,7 @@
       <nav class="app-header__nav">
         <ul>
           <li>
-            <a href="./html/menu.html">
+            <a href="./html/menu.php">
               <span
                 class="desktop-navlink-span"
                 aria-label="text du lien vers la page du menu"
@@ -54,7 +66,7 @@
             </a>
           </li>
           <li>
-            <a href="./html/login.html">
+            <a href="./html/login.php">
               <span
                 class="desktop-navlink-span"
                 aria-label="text du lien vers la page de connexion"
@@ -91,8 +103,10 @@
           </section>
           <section class="message__content-section">
             <p>
-              Bienvenue sur notre application. Nous avons hâte de vous faire
-              découvrir nos produits.
+              <?php 
+                echo display_message("Bonjour à tous et Bienvenue sur Belle Epoque, le site #1 de la gastronomie à emporter"); 
+                echo "<br>".$content;
+              ?>
             </p>
           </section>
         </article>
@@ -104,12 +118,6 @@
         >
       </section>
     </main>
-    <footer class="app-footer">
-      <ul>
-        <li>
-          <a href="./html/about.html"> Qui sommes-nous ?</a>
-        </li>
-      </ul>
-    </footer>
+    <?php include "./partials/footer.php" ?>
   </body>
 </html>

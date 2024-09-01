@@ -1,3 +1,30 @@
+<?php 
+
+    $starters = [
+        [
+            "url" => "https://cdn.pixabay.com/photo/2016/11/18/19/00/bread-1836411_1280.jpg",
+            "name" => "Toast à l'oeuf",
+            "price" => 13.00
+        ],
+        [
+            "url" => "https://cdn.pixabay.com/photo/2020/10/01/22/39/gourmet-5619887_1280.jpg",
+            "name" => "Bruschetta au four à l'Italienne",
+            "price" => 16.00
+        ],
+        [
+            "url" => "https://cdn.pixabay.com/photo/2018/08/29/19/01/fig-3640553_1280.jpg",
+            "name" => "Toast au fromage et fruit du dragon",
+            "price" => 14.00
+        ]
+
+    ]
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr-FR" dir="ltr">
     <head>
@@ -18,16 +45,16 @@
     </head>
     <body>
         <header class="app-header menu-header">
-            <section class="app-header__figure-and-title">
+            <a href="/" class="app-header__figure-and-title">
                 <figure>
                     <img src="../assets/images/logo.jpg" alt="logo de notre application">
                 </figure>
                 <span aria-label="Nom de l'application">Belle Epoque</span>
-            </section>
+            </a>
             <nav class="app-header__nav">
                 <ul>
                     <li>
-                        <a href="../index.html">
+                        <a href="/">
                             <span class="desktop-navlink-span" aria-label="text du lien vers la page d'accueil">Accueil</span>
                             <span class="mobile-navlink-span"  aria-label="icône représentant un maison ou l'accueil">
                                 <i class="fa-solid fa-house"></i>
@@ -57,37 +84,20 @@
                         <h2>Entrées</h2>
                     </header>
                     <ul class="menu__items-list">
-                        <li class="menu__list-item">
-                            <section class="menu-list-item__figure-section">
-                                <figure>
-                                    <img src="https://cdn.pixabay.com/photo/2016/11/18/19/00/bread-1836411_1280.jpg" alt="image d'un toast à l'oeuf">
-                                </figure>
-                            </section>
-                            <section class="menu-list-item__info-and-actions-section">
-                                <section class="menu-list-item__info-section">
-                                    <h3>Toast à l'oeuf</h3>
-                                    <span aria-label="prix du produit">13.00 €</span>
-                                </section>
-                                <section class="menu-list-item__actions-section">
-                                    <button type="button">
-                                        <span aria-label="icône d'ajout au panier">
-                                            <i class="fa-solid fa-cart-plus"></i>
-                                        </span>
-                                    </button>
-                                </section>
-                            </section>
-                        </li>
 
+                    <?php 
+                        for($i = 0 ; $i < 3 ; $i++) {
+                    ?>
                         <li class="menu__list-item">
                             <section class="menu-list-item__figure-section">
                                 <figure>
-                                    <img src="https://cdn.pixabay.com/photo/2020/10/01/22/39/gourmet-5619887_1280.jpg" alt="image d'une bruschetta au four à l'Italienne">
+                                    <img src=<?php echo $starters[$i]["url"] ?> alt="image de <?php echo $starters[$i]["name"] ?>">
                                 </figure>
                             </section>
                             <section class="menu-list-item__info-and-actions-section">
                                 <section class="menu-list-item__info-section">
-                                    <h3>Bruschetta au four à l'Italienne</h3>
-                                    <span aria-label="prix du produit">16.00 €</span>
+                                    <h3><?php echo $starters[$i]["name"] ?></h3>
+                                    <span aria-label="prix du produit"><?php echo $starters[$i]["price"] ?>€</span>
                                 </section>
                                 <section class="menu-list-item__actions-section">
                                     <button type="button">
@@ -98,27 +108,10 @@
                                 </section>
                             </section>
                         </li>
+                    <?php
+                        }
+                    ?>
 
-                        <li class="menu__list-item">
-                            <section class="menu-list-item__figure-section">
-                                <figure>
-                                    <img src="https://cdn.pixabay.com/photo/2018/08/29/19/01/fig-3640553_1280.jpg" alt="image de toast au fromage et fruit du dragon">
-                                </figure>
-                            </section>
-                            <section class="menu-list-item__info-and-actions-section">
-                                <section class="menu-list-item__info-section">
-                                    <h3>Toast au fromage et fruit du dragon</h3>
-                                    <span aria-label="prix du produit">16.00 €</span>
-                                </section>
-                                <section class="menu-list-item__actions-section">
-                                    <button type="button">
-                                        <span aria-label="icône d'ajout au panier">
-                                            <i class="fa-solid fa-cart-plus"></i>
-                                        </span>
-                                    </button>
-                                </section>
-                            </section>
-                        </li>
                      
                     </ul>
                 </section>
